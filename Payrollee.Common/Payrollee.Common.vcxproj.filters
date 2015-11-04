@@ -22,6 +22,12 @@
     <Filter Include="Header Files\StdCore">
       <UniqueIdentifier>{82271d4c-f541-4a48-b1eb-e96b407e5361}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{d8091046-2452-4534-87a7-e75434aa3d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{d5ee946a-2a83-4392-9b56-117abb9ba82e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -44,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="SeqOfYears.cpp">
       <Filter>Source Files\Periods</Filter>
+    </ClCompile>
+    <ClCompile Include="SymbolName.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="stdfunctions.h">
       <Filter>Header Files\StdCore</Filter>
+    </ClInclude>
+    <ClInclude Include="SymbolName.h">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -30,7 +30,7 @@ namespace Payrollee
 		public:
 			SpanOfYears SpanForPeriod(MonthPeriod period) const;
 
-			V_SPAN_OFYEARS YearsIntervalList() const;
+			void YearsIntervalList(V_SPAN_OFYEARS& clonedYears) const;
 
 			friend std::wstringstream &operator<<( std::wstringstream &output, const SeqOfYears &element )
 			{ 

@@ -65,7 +65,8 @@ namespace PayrolleeTests {
 
 					V_SPAN_OFYEARS resExpectVect(testExpect, testExpect + _countof(testExpect));
 
-					V_SPAN_OFYEARS resResultVect = testResultSpan.YearsIntervalList();
+					V_SPAN_OFYEARS resResultVect;
+					testResultSpan.YearsIntervalList(resResultVect);
 
 					Assert::AreEqual (resResultVect.begin()->ToString(), resExpectVect.begin()->ToString());
 					Assert::AreEqual (resResultVect.back().ToString(), resExpectVect.back().ToString());

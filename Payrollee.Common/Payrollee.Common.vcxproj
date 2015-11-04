@@ -111,6 +111,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SymbolName.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MonthPeriod.h" />
@@ -121,6 +122,7 @@
     <ClInclude Include="SpanOfYears.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="stdfunctions.h" />
+    <ClInclude Include="SymbolName.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>

@@ -92,6 +92,7 @@
     </ClCompile>
     <ClCompile Include="TestMonthPeriod.cpp" />
     <ClCompile Include="TestSpanOfYears.cpp" />
+    <ClCompile Include="TestSymbolName.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Payrollee.Common\Payrollee.Common.vcxproj">

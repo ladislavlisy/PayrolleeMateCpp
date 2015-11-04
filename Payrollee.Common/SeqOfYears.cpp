@@ -44,7 +44,7 @@ namespace Payrollee
 
 		struct TransformYearsToSpan : public std::binary_function<unsigned int, unsigned int, SpanOfYears>
 		{	
-			const SpanOfYears operator()(unsigned int yearFrom, unsigned int yearUpto) const
+			const SpanOfYears operator()(const unsigned int& yearFrom, const unsigned int& yearUpto) const
 			{
 				unsigned int tranUpto = SeqOfYears::TransformZeroToUpto(yearUpto);
 				unsigned int spanUpto = (tranUpto == yearFrom) ? tranUpto : (tranUpto - 1);
@@ -65,7 +65,7 @@ namespace Payrollee
 			std::copy_n(++sortedYears.begin(), sortedYears.size() - 1, std::back_inserter(finishYears));
 
 			std::transform(std::begin(beginsYears), std::end(beginsYears), std::begin(finishYears),
-				std::back_inserter(milestones),TransformYearsToSpan());
+				std::back_inserter(milestones), TransformYearsToSpan());
 		}
 
 		SeqOfYears::~SeqOfYears(void)
@@ -74,7 +74,7 @@ namespace Payrollee
 
 		SpanOfYears SeqOfYears::SpanForPeriod(MonthPeriod period) const
 		{
-			std::vector<SpanOfYears>::const_iterator itValidSpan = std::find_if(milestones.begin(), milestones.end(), SelectForPeriod(period));
+			V_SPAN_OFYEARS::const_iterator itValidSpan = std::find_if(milestones.begin(), milestones.end(), SelectForPeriod(period));
 			if (itValidSpan != milestones.end())
 			{
 				return (*itValidSpan);
@@ -83,11 +83,9 @@ namespace Payrollee
 			return SpanOfYears();
 		}
 
-		std::vector<SpanOfYears> SeqOfYears::YearsIntervalList() const
+		void SeqOfYears::YearsIntervalList(V_SPAN_OFYEARS& clonedYears) const
 		{
-			std::vector<SpanOfYears> clonedYears;
 			std::copy(milestones.begin(), milestones.end(), std::back_inserter(clonedYears));
-			return clonedYears;
 		}
 	}
 }
